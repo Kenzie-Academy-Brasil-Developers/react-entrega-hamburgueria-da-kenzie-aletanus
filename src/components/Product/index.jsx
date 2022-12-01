@@ -1,8 +1,6 @@
 import React from 'react'
 import { StyledLi } from './style';
 import { Button } from "../Button"
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 
 export const Li = ({ toast, productsUnitsCounter, setproductsUnitsCounter, id, product, currentSale, setCurrentSale, src, productName, productCategory, productPrice, type, name}) => {
   
@@ -38,19 +36,6 @@ export const Li = ({ toast, productsUnitsCounter, setproductsUnitsCounter, id, p
           id={id}
         />
       </div>
-
-      {/* <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      /> */}
 
     </StyledLi>
   )

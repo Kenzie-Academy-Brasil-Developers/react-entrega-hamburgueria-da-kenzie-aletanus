@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-    <Header allProducts={allProducts} setAllProducts={setAllProducts} products={products} setProducts={setProducts}/>
+    <Header toast={toast} allProducts={allProducts} setAllProducts={setAllProducts} products={products} setProducts={setProducts}/>
     <ShowProducts toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} allProducts={allProducts} setAllProducts={setAllProducts} products={products} setProducts={setProducts} currentSale={currentSale} setCurrentSale={setCurrentSale} />
     <ToastContainer
         position="top-right"
