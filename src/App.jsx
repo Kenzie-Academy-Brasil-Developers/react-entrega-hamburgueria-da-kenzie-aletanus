@@ -1,11 +1,11 @@
 import { Header } from "./components/Header"
 import { ShowProducts } from "./components/Products-list"
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import React, { useState } from "react"
 
-function App() {
+const App = () => {
 
   const localStorageFavorites = localStorage.getItem("@HAMBURGERS");
   const [products, setProducts] = useState([])

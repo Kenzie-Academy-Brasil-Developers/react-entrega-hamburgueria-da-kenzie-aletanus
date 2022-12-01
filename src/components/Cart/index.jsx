@@ -1,6 +1,6 @@
-import React from 'react'
-import { StyledCart } from './style';
-import { CartProduct } from '../Cart-Product';
+import React from "react"
+import { StyledCart } from "./style";
+import { CartProduct } from "../Cart-Product";
 import { Button } from "../Button"
 
 export const Cart = ({ toast, productsUnitsCounter, setproductsUnitsCounter, currentSale, setCurrentSale}) => {

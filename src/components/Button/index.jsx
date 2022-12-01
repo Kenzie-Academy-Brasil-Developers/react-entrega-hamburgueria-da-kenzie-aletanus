@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyledButton } from './style';
+import React from "react"
+import { StyledButton } from "./style";
 
 export const Button = ({onClick, id, name, type}) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { api } from "../../Api"
-import { StyledDivProducts } from './style';
-import { StyledUl } from './style';
+import { StyledDivProducts } from "./style";
+import { StyledUl } from "./style";
 import { Li } from "../Product"
 import { Aside } from "../Aside"
 

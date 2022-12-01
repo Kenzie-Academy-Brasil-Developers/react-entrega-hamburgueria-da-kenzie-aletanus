@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyledHeaderCart } from './style';
+import React from "react"
+import { StyledHeaderCart } from "./style";
 
 export const HeaderCart = ({text}) => {
   return (

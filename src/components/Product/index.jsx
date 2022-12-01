@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyledLi } from './style';
+import React from "react"
+import { StyledLi } from "./style";
 import { Button } from "../Button"
 
 export const Li = ({ toast, productsUnitsCounter, setproductsUnitsCounter, id, product, currentSale, setCurrentSale, src, productName, productCategory, productPrice, type, name}) => {
