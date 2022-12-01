@@ -10,7 +10,8 @@ export const Form = ({ allProducts, setAllProducts, products, setProducts, id, l
  
     event.preventDefault ()
     const searchedValue = event.target.children[1].value
-    const filteredProducts = allProducts.filter ((product) => product.name.toLowerCase().includes(searchedValue) || product.category.toLowerCase().includes(searchedValue))
+    const filteredProducts = allProducts.filter ((product) => product.name.toLowerCase().includes(searchedValue.toLowerCase()) || 
+    product.category.toLowerCase().includes(searchedValue.toLowerCase()))
 
     if (filteredProducts.length) { 
       setProducts(filteredProducts)
@@ -22,10 +23,12 @@ export const Form = ({ allProducts, setAllProducts, products, setProducts, id, l
   }
 
   return (
+
     <StyledForm onSubmit={(event) => searchItem (event)}>
       <label htmlFor={id}>{label}</label>
       <input id={id} placeholder={placeholder} title={title} type={type} value={value} />
       <Button name="Pesquisar" type="submit"/>
+
       <ToastContainer
         position="top-right"
         autoClose={3000}

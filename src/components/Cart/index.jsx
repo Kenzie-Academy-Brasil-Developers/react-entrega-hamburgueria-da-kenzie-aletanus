@@ -2,10 +2,8 @@ import React from 'react'
 import { StyledCart } from './style';
 import { CartProduct } from '../Cart-Product';
 import { Button } from "../Button"
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-export const Cart = ({ productsUnitsCounter, setproductsUnitsCounter, currentSale, setCurrentSale}) => {
+export const Cart = ({ toast, productsUnitsCounter, setproductsUnitsCounter, currentSale, setCurrentSale}) => {
   
   function removeAllProductsFromFavoriteCart() {
 
@@ -29,7 +27,7 @@ export const Cart = ({ productsUnitsCounter, setproductsUnitsCounter, currentSal
     <StyledCart>
 
       <ul>{currentSale.map((product) => ( 
-        <CartProduct productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} productId={product.id} key={product.id} productName={product.name} productImg={product.img} productCategory={product.category}></CartProduct>
+        <CartProduct toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} productId={product.id} key={product.id} productName={product.name} productImg={product.img} productCategory={product.category}></CartProduct>
           ))}
       </ul>
 
@@ -40,19 +38,6 @@ export const Cart = ({ productsUnitsCounter, setproductsUnitsCounter, currentSal
         </span>
         <Button  onClick={() => removeAllProductsFromFavoriteCart()} name="Remover todos" type="submit"></Button>
       </footer>
-      
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
 
     </StyledCart>
   )

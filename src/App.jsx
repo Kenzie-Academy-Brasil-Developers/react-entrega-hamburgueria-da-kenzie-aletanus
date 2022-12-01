@@ -1,5 +1,7 @@
 import { Header } from "./components/Header"
 import { ShowProducts } from "./components/Products-list"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import React, { useState } from "react"
 
@@ -14,7 +16,19 @@ function App() {
   return (
     <>
     <Header allProducts={allProducts} setAllProducts={setAllProducts} products={products} setProducts={setProducts}/>
-    <ShowProducts productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} allProducts={allProducts} setAllProducts={setAllProducts} products={products} setProducts={setProducts} currentSale={currentSale} setCurrentSale={setCurrentSale} />
+    <ShowProducts toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} allProducts={allProducts} setAllProducts={setAllProducts} products={products} setProducts={setProducts} currentSale={currentSale} setCurrentSale={setCurrentSale} />
+    <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   );
 }

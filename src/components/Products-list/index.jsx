@@ -5,7 +5,7 @@ import { StyledUl } from './style';
 import { Li } from "../Product"
 import { Aside } from "../Aside"
 
-export const ShowProducts = ({ productsUnitsCounter, setproductsUnitsCounter, allProducts, setAllProducts, currentSale, setCurrentSale, products, setProducts}) => {
+export const ShowProducts = ({ toast, productsUnitsCounter, setproductsUnitsCounter, allProducts, setAllProducts, currentSale, setCurrentSale, products, setProducts}) => {
 
     const [loading, setLoading] = useState(false)
     
@@ -36,12 +36,12 @@ export const ShowProducts = ({ productsUnitsCounter, setproductsUnitsCounter, al
                 <h1>...loading</h1>
                 ) : (
                     products.map((product) => (
-                    <Li productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} id={product.id} product={product} currentSale={currentSale} setCurrentSale={setCurrentSale} key={product.id} src={product.img} productName={product.name} productCategory={product.category} productPrice={product.price} type="button" name="Adicionar"/>
+                    <Li toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} id={product.id} product={product} currentSale={currentSale} setCurrentSale={setCurrentSale} key={product.id} src={product.img} productName={product.name} productCategory={product.category} productPrice={product.price} type="button" name="Adicionar"/>
                     ))
                 ) }
             </StyledUl>
 
-            <Aside productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} title="Carrinho de compras"/>
+            <Aside toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} title="Carrinho de compras"/>
         
         </StyledDivProducts>
     </>

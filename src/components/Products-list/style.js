@@ -7,8 +7,7 @@ export const StyledDivProducts = styled.div`
    
     @media (min-width: 1440px) {
         flex-direction: row;
-        /* display: grid; */
-        /* grid-template-columns: repeat(2,1fr); */
+        justify-content: space-between;
         gap: 2rem;
         padding: var(--unit-16) 10%;
     }
