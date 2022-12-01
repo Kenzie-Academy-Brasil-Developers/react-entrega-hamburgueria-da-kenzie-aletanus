@@ -5,11 +5,12 @@ export const StyledDivProducts = styled.div`
     display: flex;
     flex-direction: column;
    
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
+        padding: var(--unit-16) 10%;
+    }
+
+    @media (min-width: 1690px) {
         flex-direction: row;
-        /* display: grid; */
-        /* grid-template-columns: repeat(2,1fr); */
-        gap: 2rem;
         padding: var(--unit-16) 10%;
     }
 `;
@@ -76,17 +77,13 @@ export const StyledUl = styled.ul`
         line-height: var(--font-line-height-1);
     }
 
-    @media (min-width: 1440px){
+    @media (min-width: 1690px){
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         overflow-x: hidden;
-    
-        /* display: grid;
-        grid-template-columns: repeat(3, 1fr); */
-        /* padding: var(--unit-16) 10%; */
         
         li {
             margin-bottom: 2%;
@@ -94,9 +91,9 @@ export const StyledUl = styled.ul`
         }
 
         li > div {
-        display: flex;
-        align-items: flex-start;
-    }
+            display: flex;
+            align-items: flex-start;
+        }
     }
   
 `;

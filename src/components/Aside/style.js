@@ -23,4 +23,11 @@ export const StyledAside = styled.aside`
         top: var(--unit-rem-64);
         left: 0px;
     }
+
+    @media (min-width: 1690px) {
+        width: 707px;
+
+
+    }
+
 `;
