@@ -4,13 +4,19 @@ export const StyledDivProducts = styled.div`
     
     display: flex;
     flex-direction: column;
-   
-    @media (min-width: 1440px) {
+
+    @media (min-width: 1024px) {
         flex-direction: row;
         justify-content: space-between;
         gap: 2rem;
         padding: var(--unit-16) 10%;
     }
+
+    @media (min-width: 2000px){
+
+        padding: var(--unit-16) 15%;
+    }
+
 `;
 
 export const StyledUl = styled.ul`
@@ -19,6 +25,7 @@ export const StyledUl = styled.ul`
     overflow-x: scroll;
     padding: var(--unit-20) 0;
     align-items: flex-start;
+    width: 100%;
 
     li {
         border: solid 1px var(--grey-20);
@@ -28,7 +35,7 @@ export const StyledUl = styled.ul`
         align-items: center;
         justify-content: center;
         margin: 0 var(--unit-12);
-        min-width: 300px;
+        min-width: 230px;
     }
 
     li > picture {
@@ -75,27 +82,29 @@ export const StyledUl = styled.ul`
         line-height: var(--font-line-height-1);
     }
 
-    @media (min-width: 1440px){
+    @media (min-width: 1024px){
 
         display: flex;
         flex-direction: row;
+        overflow: visible;
         flex-wrap: wrap;
-        justify-content: space-between;
-        overflow-x: hidden;
-    
-        /* display: grid;
-        grid-template-columns: repeat(3, 1fr); */
-        /* padding: var(--unit-16) 10%; */
-        
+        justify-content: center;
+        gap: 5%;
+        width: 70%;
+
         li {
-            margin-bottom: 2%;
-            width: 30%;
+            width: 25%;
+            margin: 0;
         }
 
         li > div {
-        display: flex;
-        align-items: flex-start;
+            display: flex;
+            align-items: flex-start;
+        }
+    } 
+    
+    @media (min-width: 2000px){
+        width: 76%;
     }
-    }
-  
+    
 `;
