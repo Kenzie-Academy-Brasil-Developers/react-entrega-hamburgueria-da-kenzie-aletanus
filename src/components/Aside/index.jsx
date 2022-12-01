@@ -3,7 +3,7 @@ import { StyledAside } from './style';
 import noCart from "../../images/Empty Cart.svg"
 import { Cart } from "../Cart"
 
-export const Aside = ({title, currentSale, setCurrentSale}) => {
+export const Aside = ({productsUnitsCounter, setproductsUnitsCounter, title, currentSale, setCurrentSale}) => {
 
   return (
 
@@ -14,7 +14,7 @@ export const Aside = ({title, currentSale, setCurrentSale}) => {
       <figure>
         <img src={ noCart } alt="" />
       </figure>
-      </div>) : (<Cart currentSale={currentSale} setCurrentSale={setCurrentSale}/>)}
+      </div>) : (<Cart productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale}/>)}
 
     </StyledAside>
   )

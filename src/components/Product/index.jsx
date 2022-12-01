@@ -4,7 +4,7 @@ import { Button } from "../Button"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const Li = ({ id, product, currentSale, setCurrentSale, src, productName, productCategory, productPrice, type, name}) => {
+export const Li = ({ productsUnitsCounter, setproductsUnitsCounter, id, product, currentSale, setCurrentSale, src, productName, productCategory, productPrice, type, name}) => {
   
   function addToCart(product) {
 
@@ -12,7 +12,8 @@ export const Li = ({ id, product, currentSale, setCurrentSale, src, productName,
       setCurrentSale([...currentSale, product]);
       toast.success("Produto salvo com sucesso!");
     } else {
-      toast.warning("Este produto já está salvo.");
+      toast.warning("Este produto já foi adicionado.");
+      // setproductsUnitsCounter()
     }
  }
  

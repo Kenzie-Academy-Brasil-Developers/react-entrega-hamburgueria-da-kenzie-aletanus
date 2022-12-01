@@ -5,13 +5,9 @@ import { StyledUl } from './style';
 import { Li } from "../Product"
 import { Aside } from "../Aside"
 
-export const ShowProducts = ({ allProducts, setAllProducts, currentSale, setCurrentSale, products, setProducts}) => {
+export const ShowProducts = ({ productsUnitsCounter, setproductsUnitsCounter, allProducts, setAllProducts, currentSale, setCurrentSale, products, setProducts}) => {
 
-    // const localStorageFavorites = localStorage.getItem("@HAMBURGERS");
-    // const [products, setProducts] = useState([])
-    // const [currentSale, setCurrentSale] = useState(localStorageFavorites ? JSON.parse(localStorageFavorites) : [])
     const [loading, setLoading] = useState(false)
-    console.log(products)
     
     useEffect (() => {
       const getApi = async () => {
@@ -40,12 +36,12 @@ export const ShowProducts = ({ allProducts, setAllProducts, currentSale, setCurr
                 <h1>...loading</h1>
                 ) : (
                     products.map((product) => (
-                    <Li id={product.id} product={product} currentSale={currentSale} setCurrentSale={setCurrentSale} key={product.id} src={product.img} productName={product.name} productCategory={product.category} productPrice={product.price} type="button" name="Adicionar"/>
+                    <Li productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} id={product.id} product={product} currentSale={currentSale} setCurrentSale={setCurrentSale} key={product.id} src={product.img} productName={product.name} productCategory={product.category} productPrice={product.price} type="button" name="Adicionar"/>
                     ))
                 ) }
             </StyledUl>
 
-            <Aside currentSale={currentSale} setCurrentSale={setCurrentSale} title="Carrinho de compras"/>
+            <Aside productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} title="Carrinho de compras"/>
         
         </StyledDivProducts>
     </>

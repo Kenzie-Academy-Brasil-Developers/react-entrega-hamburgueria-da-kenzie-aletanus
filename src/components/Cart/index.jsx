@@ -5,7 +5,7 @@ import { Button } from "../Button"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const Cart = ({ currentSale, setCurrentSale}) => {
+export const Cart = ({ productsUnitsCounter, setproductsUnitsCounter, currentSale, setCurrentSale}) => {
   
   function removeAllProductsFromFavoriteCart() {
 
@@ -29,7 +29,7 @@ export const Cart = ({ currentSale, setCurrentSale}) => {
     <StyledCart>
 
       <ul>{currentSale.map((product) => ( 
-        <CartProduct currentSale={currentSale} setCurrentSale={setCurrentSale} productId={product.id} key={product.id} productName={product.name} productImg={product.img} productCategory={product.category}></CartProduct>
+        <CartProduct productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} productId={product.id} key={product.id} productName={product.name} productImg={product.img} productCategory={product.category}></CartProduct>
           ))}
       </ul>
 
