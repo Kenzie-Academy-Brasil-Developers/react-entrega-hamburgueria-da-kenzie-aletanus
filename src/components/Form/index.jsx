@@ -8,8 +8,8 @@ export const Form = ({ toast, allProducts, setAllProducts, products, setProducts
  
     event.preventDefault ()
     const searchedValue = event.target.children[1].value
-    const filteredProducts = allProducts.filter ((product) => product.name.toLowerCase().replace(new RegExp("[-]", "gi"), " ").includes(searchedValue.toLowerCase()) || 
-    product.category.toLowerCase().replace(new RegExp("[-]", "gi"), " ").includes(searchedValue.toLowerCase()))
+    const filteredProducts = allProducts.filter ((product) => product.name.toLowerCase().replace(new RegExp("[-]", "gi"), " ").replace(new RegExp("[áàâã]", "gi"), "a").includes(searchedValue.toLowerCase()) || 
+    product.category.toLowerCase().replace(new RegExp("[-]", "gi"), " ").replace(new RegExp("[áàâã]", "gi"), "a").includes(searchedValue.toLowerCase()))
 
     if (filteredProducts.length) { 
       setProducts(filteredProducts)
