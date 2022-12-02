@@ -26,7 +26,7 @@ export const Li = ({ toast, productsUnitsCounter, setproductsUnitsCounter, id, p
       <div>
         <h3>{productName}</h3>
         <p className='productCategory'>{productCategory}</p>
-        <p className='productPrice'>{productPrice.toFixed(2)}</p>
+        <p className='productPrice'>{productPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})}</p>
         <Button 
           onClick={() => addToCart(product)} 
           type={type} 

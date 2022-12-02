@@ -45,7 +45,7 @@ export const Cart = ({ title, toast, productsUnitsCounter, setproductsUnitsCount
         { currentSale.length === 0 ? (<></>) : (<footer>
             <span>
               <h2>Total</h2>
-              <p>R$ {Number(totalPrice ()).toFixed(2)}</p>
+              <p>{totalPrice().toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})}</p>
             </span>
             <Button  onClick={() => removeAllProductsFromFavoriteCart()} name="Remover todos" type="submit"></Button>
           </footer>)
