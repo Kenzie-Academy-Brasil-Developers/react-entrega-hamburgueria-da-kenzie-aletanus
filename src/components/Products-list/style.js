@@ -17,6 +17,11 @@ export const StyledDivProducts = styled.div`
         padding: var(--unit-16) 15%;
     }
 
+    @media (min-width: 2700px){
+
+        padding: var(--unit-16) 18%;
+    }
+
 `;
 
 export const StyledUl = styled.ul`

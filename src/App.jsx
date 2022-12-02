@@ -2,8 +2,8 @@ import { Header } from "./components/Header"
 import { ShowProducts } from "./components/Products-list"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import React, { useState } from "react"
+import { Footer } from "./components/Footer";
 
 const App = () => {
 
@@ -17,6 +17,7 @@ const App = () => {
     <>
     <Header toast={toast} allProducts={allProducts} setAllProducts={setAllProducts} products={products} setProducts={setProducts}/>
     <ShowProducts toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} allProducts={allProducts} setAllProducts={setAllProducts} products={products} setProducts={setProducts} currentSale={currentSale} setCurrentSale={setCurrentSale} />
+    <Footer/>
     <ToastContainer
         position="top-right"
         autoClose={3000}

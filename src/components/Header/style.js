@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
 
+     position: relative;
      background-color: var(--grey-0);
      display: flex;
      align-items: center;
@@ -31,6 +32,11 @@ export const StyledHeader = styled.header`
      @media (min-width: 2000px){
 
           padding: var(--unit-16) 15%;
+     }
+
+     @media (min-width: 2700px){
+
+          padding: var(--unit-16) 18%;
      }
      
 `;

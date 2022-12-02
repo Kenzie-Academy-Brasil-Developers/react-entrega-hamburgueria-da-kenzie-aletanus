@@ -4,7 +4,7 @@ import { StyledForm } from "./style"
 
 export const Form = ({ toast, allProducts, setAllProducts, products, setProducts, id, label, type, value, onChange, title, placeholder }) => {
 
-  function searchItem (event) {
+  const searchItem = (event) => {
  
     event.preventDefault ()
     const searchedValue = event.target.children[1].value

@@ -3,7 +3,7 @@ import { api } from "../../Api"
 import { StyledDivProducts } from "./style";
 import { StyledUl } from "./style";
 import { Li } from "../Product"
-import { Aside } from "../Aside"
+import { Cart } from "../Cart"
 
 export const ShowProducts = ({ toast, productsUnitsCounter, setproductsUnitsCounter, allProducts, setAllProducts, currentSale, setCurrentSale, products, setProducts}) => {
 
@@ -41,7 +41,7 @@ export const ShowProducts = ({ toast, productsUnitsCounter, setproductsUnitsCoun
                 ) }
             </StyledUl>
 
-            <Aside toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} title="Carrinho de compras"/>
+            <Cart toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} title="Carrinho de compras"/>
         
         </StyledDivProducts>
     </>

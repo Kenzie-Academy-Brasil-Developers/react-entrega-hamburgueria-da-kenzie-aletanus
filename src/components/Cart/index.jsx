@@ -3,15 +3,15 @@ import { StyledCart } from "./style";
 import { CartProduct } from "../Cart-Product";
 import { Button } from "../Button"
 
-export const Cart = ({ toast, productsUnitsCounter, setproductsUnitsCounter, currentSale, setCurrentSale}) => {
+export const Cart = ({ title, toast, productsUnitsCounter, setproductsUnitsCounter, currentSale, setCurrentSale}) => {
   
-  function removeAllProductsFromFavoriteCart() {
+  const removeAllProductsFromFavoriteCart = () => {
 
     setCurrentSale([])
     toast.success("Produtos removidos com sucesso!");
   }
 
-  function totalPrice () {
+  const totalPrice = () => {
 
     let totalPriceValue = "00.00"
     if (currentSale.length) {
@@ -26,18 +26,31 @@ export const Cart = ({ toast, productsUnitsCounter, setproductsUnitsCounter, cur
   return (
     <StyledCart>
 
-      <ul>{currentSale.map((product) => ( 
+      <h2 className="h2-title">{title}</h2>
+
+      <ul>
+
+      {currentSale.length === 0 ? (<li className="li-empty-cart">
+
+        <h2>Carrinho vazio</h2>
+        <p>Adicione itens</p>
+
+      </li>) : (currentSale.map((product) => ( 
         <CartProduct toast={toast} productsUnitsCounter={productsUnitsCounter} setproductsUnitsCounter={setproductsUnitsCounter} currentSale={currentSale} setCurrentSale={setCurrentSale} productId={product.id} key={product.id} productName={product.name} productImg={product.img} productCategory={product.category}></CartProduct>
-          ))}
+          )))}
+
       </ul>
 
-      <footer>
-        <span>
-          <h2>Total</h2>
-          <p>R$ {Number(totalPrice ()).toFixed(2)}</p>
-        </span>
-        <Button  onClick={() => removeAllProductsFromFavoriteCart()} name="Remover todos" type="submit"></Button>
-      </footer>
+      <>
+        { currentSale.length === 0 ? (<></>) : (<footer>
+            <span>
+              <h2>Total</h2>
+              <p>R$ {Number(totalPrice ()).toFixed(2)}</p>
+            </span>
+            <Button  onClick={() => removeAllProductsFromFavoriteCart()} name="Remover todos" type="submit"></Button>
+          </footer>)
+        }
+      </>
 
     </StyledCart>
   )

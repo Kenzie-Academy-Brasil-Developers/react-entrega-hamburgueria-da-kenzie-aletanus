@@ -4,14 +4,12 @@ import { Button } from "../Button"
 
 export const CartProduct = ({ toast, productsUnitsCounter, setproductsUnitsCounter, currentSale, setCurrentSale, productId, productName, productImg, productCategory}) => {
 
-  function removeProductFromFavoriteCart(productId) {
+  const removeProductFromFavoriteCart = (productId) => {
     console.log (productId)
     const newList = currentSale.filter((product) => product.id !== productId);
     setCurrentSale(newList);
     toast.success("Produto removido com sucesso!");
   }
-
-  console.log (productsUnitsCounter)
   
   return (
    

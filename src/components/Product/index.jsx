@@ -4,9 +4,7 @@ import { Button } from "../Button"
 
 export const Li = ({ toast, productsUnitsCounter, setproductsUnitsCounter, id, product, currentSale, setCurrentSale, src, productName, productCategory, productPrice, type, name}) => {
   
-  function addToCart(product) {
-
-    console.log(currentSale)
+  const addToCart = (product) => {
 
     if (!currentSale.some((currentSale) => currentSale.id === product.id)) {
       setCurrentSale([...currentSale, product]);
@@ -15,7 +13,7 @@ export const Li = ({ toast, productsUnitsCounter, setproductsUnitsCounter, id, p
       toast.warning("Este produto já foi adicionado.");
       // setproductsUnitsCounter()
     }
- }
+  }
  
   return (
 

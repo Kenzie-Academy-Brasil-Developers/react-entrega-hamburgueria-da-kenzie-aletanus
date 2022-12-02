@@ -4,11 +4,11 @@ export const StyledCartProduct = styled.li`
   
   background-color: var(--grey-0);
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   padding: var(--unit-20) 0;
+  justify-content: space-between;
 
   picture {
+    margin: 0 0 0 var(--unit-12);
     background-color: var(--grey-20);
     border-radius: var(--radius-2);
     height: 70px;
@@ -20,12 +20,17 @@ export const StyledCartProduct = styled.li`
     width: 100%;
   }
 
+  span {
+    width: 95px;
+  }
+
   span > h2 {
     color: var(--grey-100);
     font-family: var(--font-family-1);
     font-size: var(--unit-rem-18);
     font-weight: var(--font-weight-7);
     line-height: var(--font-line-height-1);
+    white-space: break-spaces;
   }
 
   span > p {
@@ -40,12 +45,13 @@ export const StyledCartProduct = styled.li`
     background-color: var(--grey-0);
     border: solid 1px var(--grey-0);
     cursor: pointer;
-    color: var(--grey-50);
+    color: var(--color_secondary);
     font-family: var(--font-family-1);
     font-size: var(--unit-rem-14);
     font-weight: var(--font-weight-5);
     line-height: var(--font-line-height-1);
     text-decoration-line: none;
+    padding: 0 var(--unit-16) 0 0;
 
     &:hover {
         color: var(--grey-100);
