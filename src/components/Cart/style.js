@@ -132,7 +132,7 @@ export const StyledCart = styled.aside`
     width: 30%;
 
     ul {
-      max-height: 520px;
+      max-height: 508px;
     }
 
   }

@@ -75,13 +75,7 @@ export const StyledFooter = styled.footer`
           justify-content: space-between;
           margin-top: var(--unit-40);
           padding: var(--unit-16) 10%;
-          margin-top: 92px;
-
-     }
-
-     @media (min-width: 1380px){
-          
-          margin-top: 32px;
+          margin-top: -12px;
 
      }
 
