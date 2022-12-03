@@ -7,7 +7,7 @@ export const StyledCart = styled.aside`
   font-size: var(--unit-rem-18);
   font-weight: var(--font-weight-7);
   height: var(--unit-rem-64);
-  width: 296px;
+  width: 85%;
   line-height: var(--font-line-height-1);
   white-space: nowrap;
   margin: var(--unit-20) 0 0 var(--unit-12);
@@ -27,8 +27,9 @@ export const StyledCart = styled.aside`
   }
   
   ul {
+    background-color: var(--grey-0);
+    padding: 0 5%;
     max-height: 280px;
-    /* overflow-x: hidden; */
     overflow-y: auto;
     overflow-x: hidden;
   }
@@ -95,9 +96,40 @@ export const StyledCart = styled.aside`
     line-height: var(--font-line-height-1);
   }
   
+  @media (min-width: 500px) {
+    width: 60%;
+    max-width: 516px;
+  }
+
+  @media (min-width: 650px){
+
+    ul {
+      padding: 0 8%;
+    }
+  }
+
+  @media (min-width: 800px){
+
+    ul {
+      padding: 0 9%;
+    }
+  }
+
+  @media (min-width: 900px){
+
+    ul {
+    padding: 0 12%;
+  }
+  }
+
+  @media (min-width: 1023px){
+
+    width: 50%;
+  }
+
   @media (min-width: 1440px){
 
-    width: 25%;
+    width: 30%;
 
     ul {
       max-height: 520px;
@@ -107,7 +139,7 @@ export const StyledCart = styled.aside`
 
   @media (min-width: 2100px){
 
-    width: 360px;
+    max-width: 440px;
   }
 
 `;

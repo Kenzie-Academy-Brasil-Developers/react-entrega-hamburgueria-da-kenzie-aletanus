@@ -8,7 +8,6 @@ export const StyledCartProduct = styled.li`
   justify-content: space-between;
 
   picture {
-    margin: 0 0 0 var(--unit-12);
     background-color: var(--grey-20);
     border-radius: var(--radius-2);
     height: 70px;
@@ -51,7 +50,7 @@ export const StyledCartProduct = styled.li`
     font-weight: var(--font-weight-5);
     line-height: var(--font-line-height-1);
     text-decoration-line: none;
-    padding: 0 var(--unit-16) 0 0;
+    padding: 0 0 0 0;
 
     &:hover {
         color: var(--grey-100);

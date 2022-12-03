@@ -4,9 +4,11 @@ export const StyledDivProducts = styled.div`
     
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     @media (min-width: 1024px) {
         flex-direction: row;
+        align-items: flex-start;
         justify-content: space-between;
         gap: 2rem;
         padding: var(--unit-16) 10%;
@@ -94,12 +96,11 @@ export const StyledUl = styled.ul`
         overflow: visible;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 5%;
         width: 70%;
 
         li {
             width: 25%;
-            margin: 0;
+            margin: 0 2.5% 2.5%;
         }
 
         li > div {
